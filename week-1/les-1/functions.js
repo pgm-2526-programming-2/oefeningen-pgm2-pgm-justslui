@@ -9,12 +9,17 @@ function multiply(a, b) {
 function division(a, b) {
   return a / b;
 }
-function showCalculation(a = 0, b = 0, callback = sum) {
-  //standaard declaratie meegeven aan parameters
-  console.log(callback(a, b));
+
+function numberPlusOne(a) {
+  return a + 1;
 }
 
-showCalculation(5, 69, sum); //2
+function showCalculation(a = 0, b = 0, calc = sum) {
+  //standaard declaratie meegeven aan parameters
+  console.log(calc(a, b));
+}
+
+showCalculation(5, 69, numberPlusOne); //2
 showCalculation(9, 5, multiply); //1
 showCalculation(5, 3, division); //5
 
